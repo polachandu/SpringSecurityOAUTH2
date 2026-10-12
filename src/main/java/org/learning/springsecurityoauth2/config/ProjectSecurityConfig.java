@@ -27,21 +27,13 @@ public class ProjectSecurityConfig {
     @Bean
     ClientRegistrationRepository clientRegistrationRepository(){
         ClientRegistration github = githubClientRegistration();
-        ClientRegistration facebook = facebookClientRegistration();
-        return new InMemoryClientRegistrationRepository(github, facebook);
+        return new InMemoryClientRegistrationRepository(github);
     }
 
     private ClientRegistration githubClientRegistration(){
         return CommonOAuth2Provider.GITHUB.getBuilder("github")
-                .clientId("")
-                .clientSecret("")
-                .build();
-    }
-
-    private ClientRegistration facebookClientRegistration(){
-        return CommonOAuth2Provider.FACEBOOK.getBuilder("facebook")
-                .clientId("")
-                .clientSecret("")
+                .clientId("Ov23li0e7tKsqS8j6xjh")
+                .clientSecret("932ca77854926701ac8ebc8455688ae0b39a0ea2")
                 .build();
     }
 }
